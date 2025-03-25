@@ -18,7 +18,6 @@ class BenchmarkResult:
         self.response_speed = self.response_tokens / self.response_time if self.response_time > 0 else 0
         self.total_speed = (self.prompt_tokens + self.response_tokens) / self.total_time if self.total_time > 0 else 0
         self.avg_completion_speed = np.mean(self.completion_tokens_per_second) if self.completion_tokens_per_second else 0
-        self.peak_completion_speed = np.max(self.completion_tokens_per_second) if self.completion_tokens_per_second else 0
         
     def to_dict(self):
         return {
@@ -36,8 +35,7 @@ class BenchmarkResult:
                 "response": round(self.response_speed, 2),
                 "total": round(self.total_speed, 2),
                 "completion": {
-                    "average": round(self.avg_completion_speed, 2),
-                    "peak": round(self.peak_completion_speed, 2)
+                "average": round(self.avg_completion_speed, 2)
                 }
             },
             "system": {

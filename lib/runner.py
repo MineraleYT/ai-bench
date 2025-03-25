@@ -13,6 +13,7 @@ import numpy as np
 from .result import BenchmarkResult
 from .system_info import SystemInfo
 from .analysis import print_results
+from .utils import Colors
 
 def save_results(results, timestamp):
     results_dir = 'results'
