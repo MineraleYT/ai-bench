@@ -1,0 +1,21 @@
+# Python
+lib/__pycache__/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+
+# Benchmark Results and Logs
+results/
+logs/
+*.log
+benchmark_*.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
